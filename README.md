@@ -48,13 +48,13 @@ Following requirements need to be met in order for the tool to work properly
 - close MSI Afterburner (if running)
 
 ## Usage
-The tool can be run as-is via the command: **"run.py"**, it will pick default values for tuning which might not be perfect - but will work. In order to change clocks, **it is required to run the executing command line or batch-script with admin privileges (see warning above!).**
+The tool can be run as-is. It will pick default values for tuning which might not be perfect - but will work. **It is required to run the executing command line or batch-script with admin privileges (see warning above!).**
 ```
-run.py --mode 2 --devices 0,1,2,3 --steps 5 --shares 3 --datapoints 30 --offset 0.35 --coreUC -200 --memOC 500 --powerLimit 235 --powerCost 0.36 --dollarPerMHash 0.0966
+cryptotuner.exe --mode 2 --devices 0,1,2,3 --steps 5 --shares 3 --datapoints 30 --offset 0.35 --coreUC -200 --memOC 500 --powerLimit 235 --powerCost 0.36 --dollarPerMHash 0.0966
 ```
 
-See file **"start.bat"** for a list of available parameters or see below list:
-* --mode <-t>: Defines which optimization mode for power limit should be applied, "--mode 0" (Efficiency) "--mode 1 (Speed)
+See below list for aditional parameters:
+* --mode <-t>: Defines which optimization mode for power limit should be applied, "--mode 0" (Efficiency) "--mode 1" (Speed) "--mode 2" (Profitability)
 * --devices <-d>: list of GPUs by id that should be tuned, seperated by commas e.g. "--devices 0,1,2,3"
 * --steps <-s>: stepsize to in/decrease memory and core clocks per run e.g. "--steps 5" will increase or decrease clocks 5 Mhz at a time - lower values increase accuracy of result but take longer time to complete the overall process
 * --shares <-x>: number of shares each GPU needs to generate before settings are validated e.g. "--shares 5". More shares increases stability but increases overall process time
@@ -71,6 +71,6 @@ See file **"start.bat"** for a list of available parameters or see below list:
 By default, running the tool will mine some shares to my wallet address as a way to help me keep developing this tool.
 If you want to pursue a more direct approach, feel free to use below crypto wallets.
 #### Ethereum: 0xec64ad21a91fcd8d9bf1127dfe0fdba851c2eb01 (ONLY ERC20) ####
-![Ethereum Wallet QR-Code](https://github.com/CryptoTuner/CryptoTuner-Private/raw/master/img/ethereum-wallet.png)
+![Ethereum Wallet QR-Code](https://github.com/CryptoTuner/CryptoTuner/raw/master/wallets/ethereum-wallet.png)
 #### Bitcoin: 1D3sK7NnTa483Wthkj829Uj4A8LyhreMob #### 
-![Bitcoin Wallet QR-Code](https://github.com/CryptoTuner/CryptoTuner-Private/raw/master/img/bitcoin-wallet.png)
+![Bitcoin Wallet QR-Code](https://github.com/CryptoTuner/CryptoTuner-Private/raw/master/wallets/bitcoin-wallet.png)
