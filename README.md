@@ -1,13 +1,8 @@
 # CryptoTune
 Script to automatically find optimized and stable GPU overclock settings to mine Ethereum.
 
-
-## Warning
-As this software needs to be run as admin, do not use it if you are not sure what you are doing! The software will not try to steal your data in any way, but **i'm only some dude from the internet** so please do not trust me on that :)
-
-
 # What it does
-This software does exactly what you would do manually to reach peak speeds/efficiency on your GPUs - but in parallel and without the effort.
+This software does exactly what you would do manually to reach peak speeds/efficiency on your GPUs - but in a parallel, automatically yet accurate way.
 
 ## Features for automated GPU Overclocking & Power Limiting
 * Thermal Throttling detection
@@ -30,7 +25,7 @@ After finding the maximum possible memory clock, the software will start reducin
 ### Finding minimum Power Limits
 After clocks are fine tuned, each GPUs power limit will be reduced to lower temperatures and increase efficiency (lower power costs). There are three modes to choose from:
 * Mode 0: Maximum Efficiency (default): your GPU will probably not reach it's top hash rate, but it will be the most efficient (power/hash) you can achieve
-* Mode 1: Maximum Speed (hybrid): Your GPU will run some kHashes below it's maximum speed but can achieve this with a lot less power than default (see "margin"-parameter)
+* Mode 1: Maximum Speed (hybrid): Your GPU will run some kHashes below it's maximum speed but can achieve this with a lot less power than default (see "offset"-parameter)
 * Mode 2: Maximum Profitability: Enter your powerCost and "daily dollars per MHash" and get the best settings for achieving the highest profitability
 
 ### Tuning all GPUs in parallel
@@ -44,13 +39,13 @@ This software tracks your GPUs state every second, creates statistics from that 
 Following requirements need to be met in order for the tool to work properly
 - NVIDIA Driver installed (especially nvidia-smi)
 - Up-to-date Windows 10
-- executing script with Administrative Access (open CMD with admin privileges or right-click "start.bat" -> run as admin)
-- close MSI Afterburner (if running)
+- executing script with Administrative Access
+- close MSI Afterburner or any other Overclock Tool (if running)
 
 ## Usage
-The tool can be run as-is. It will pick default values for tuning which might not be perfect - but will work. **It is required to run the executing command line or batch-script with admin privileges (see warning above!).**
+The tool can be run as-is. It will pick default values for tuning which might not be perfect - but will work. **It is required to run the executable or batch-script with admin privileges (see warning above!).**
 ```
-cryptotuner.exe --mode 2 --devices 0,1,2,3 --steps 5 --shares 3 --datapoints 30 --offset 0.35 --coreUC -200 --memOC 500 --powerLimit 235 --powerCost 0.36 --dollarPerMHash 0.0966
+cryptotuner.exe --mode 2 --devices 0,1,2,3 --steps 5 --shares 3 --datapoints 30 --offset 0.35 --coreUC -200 --memOC 500 --powerLimit 235 --powerCost 0.36 --dollarPerMHash 0.065
 ```
 
 See below list for aditional parameters:
@@ -64,8 +59,8 @@ See below list for aditional parameters:
 * --memOC <-m>: starting value of memory overclock e.g. "--memOC 1000" will begin the memory overclock with +1000mhz. Separate values for multiple GPUs with comma e.g. "--memOC 1000, 800, 550"
 * --powerLimit <-p>: starting value of power limit e.g. "--powerLimit 240" will begin power limit reduction at 240 watts. Separate values for multiple GPUs with comma e.g. "--powerLimit 240,230,250"
 * --powercost <-e>: define how much your power costs $/kWh, needed to calculate profitability in mode 2
-* --dollarPerMHash <-i>: define the value of 1 MHash, needed to calculate profitability in mode 2 - you can find out via https://whattomine.com/ - or pick 0.0966 
-* --loadPreset <-w>: load a preset from the GPU database that is fitting to your cards. If no settings could be found, your provided OC settings (if any) or default values for the OC will be applied (MEM +0 / Core +0/ PL 100% / Fan Temp:60ºC)
+* --dollarPerMHash <-i>: define the value of 1 MHash, needed to calculate profitability in mode 2 - you can find out via https://whattomine.com/
+* --loadPreset <-w>: load a preset from the GPU database that is fitting to your cards. If no settings could be found, your provided OC settings (if any) or default values for the OC will be applied (MEM +0 / Core +0/ PL 100% / Fan Temp: 60ºC)
 
 ## Contribution / Donation
 By default, running the tool will mine some shares to my wallet address as a way to help me keep developing this tool.
