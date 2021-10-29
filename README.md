@@ -71,6 +71,6 @@ See below list for aditional parameters:
 By default, running the tool will mine some shares to my wallet address as a way to help me keep developing this tool.
 If you want to pursue a more direct approach, feel free to use below crypto wallets.
 #### Ethereum: 0xec64ad21a91fcd8d9bf1127dfe0fdba851c2eb01 (ONLY ERC20) ####
-![Ethereum Wallet QR-Code](https://github.com/CryptoTuner/CryptoTuner/raw/master/wallets/ethereum-wallet.png)
+![Ethereum Wallet QR-Code](https://github.com/CryptoTuner/CryptoTuner/raw/main/wallets/ethereum-wallet.png)
 #### Bitcoin: 1D3sK7NnTa483Wthkj829Uj4A8LyhreMob #### 
-![Bitcoin Wallet QR-Code](https://github.com/CryptoTuner/CryptoTuner-Private/raw/master/wallets/bitcoin-wallet.png)
+![Bitcoin Wallet QR-Code](https://github.com/CryptoTuner/CryptoTuner-Private/raw/main/wallets/bitcoin-wallet.png)
