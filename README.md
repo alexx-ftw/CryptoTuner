@@ -57,10 +57,14 @@ See below list for aditional parameters:
 * --offset <-o>: to compare speed results e.g. "--offset 0.35". If set too low, your efficiency will suffer. If set too high, the efficiency will be fine but your speed result will suffer, feel free to play with this but 0.35 is a good starting point.
 * --coreUC <-c>: starting value of core underclock e.g. "--coreUC -200" will begin the core underclock with -200mhz. Separate values for multiple GPUs with comma e.g. "--coreUC -200,-100,-50"
 * --memOC <-m>: starting value of memory overclock e.g. "--memOC 1000" will begin the memory overclock with +1000mhz. Separate values for multiple GPUs with comma e.g. "--memOC 1000, 800, 550"
+* --memTweak <-z>: memory tweak parameter for compatible cards. Separate values for multiple GPUs with comma e.g. "--memTweak 1,0,3"
 * --powerLimit <-p>: starting value of power limit e.g. "--powerLimit 240" will begin power limit reduction at 240 watts. Separate values for multiple GPUs with comma e.g. "--powerLimit 240,230,250"
 * --powercost <-e>: define how much your power costs $/kWh, needed to calculate profitability in mode 2
 * --dollarPerMHash <-i>: define the value of 1 MHash, needed to calculate profitability in mode 2 - you can find out via https://whattomine.com/
 * --loadPreset <-w>: load a preset from the GPU database that is fitting to your cards. If no settings could be found, your provided OC settings (if any) or default values for the OC will be applied (MEM +0 / Core +0/ PL 100% / Fan Temp: 60ºC)
+
+## Support
+Bitcoin Talk Forum: https://bitcointalk.org/index.php?topic=5368267.0
 
 ## Contribution / Donation
 By default, running the tool will mine some shares to my wallet address as a way to help me keep developing this tool.
