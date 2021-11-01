@@ -4,7 +4,20 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## Unreleased
 ### Added
-Change the way the options/arguments/parameters work
+"--resume" flag for continuing the OC process from where it was left at (in case of BSOD or manually quitting)
+Customize Presets
+Colors to information being displayed
+### Changed
+### Removed
+
+## [1.2.0] 2021-11-01
+### Added
+Catch Ctrl+C and exit gracefully
+Verbosity setting (up to 3 levels)
+### Changed
+Changed parameters names and short-names compared to v1.1.0. Not changing major version as there are no known users
+Improve verbose
+Miner now is on the root folder
 ### Removed
 Debug information form CLI
 

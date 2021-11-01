@@ -49,19 +49,24 @@ cryptotuner.exe --mode 2 --devices 0,1,2,3 --steps 5 --shares 3 --datapoints 30 
 ```
 
 See below list for aditional parameters:
-* --mode <-t>: Defines which optimization mode for power limit should be applied, "--mode 0" (Efficiency) "--mode 1" (Speed) "--mode 2" (Profitability)
-* --devices <-d>: list of GPUs by id that should be tuned, seperated by commas e.g. "--devices 0,1,2,3"
+* --help <-h>: Shows a help message on the console with all possible arguments and options.
+* --mode <-m>: Defines which optimization mode for power limit should be applied, "--mode 0" (Efficiency) "--mode 1" (Speed) "--mode 2" (Profitability)
+* --devices <-d>: list of GPUs by id that should be tuned, seperated by a blank space e.g. "--devices 0 1 2 3"
 * --steps <-s>: stepsize to in/decrease memory and core clocks per run e.g. "--steps 5" will increase or decrease clocks 5 Mhz at a time - lower values increase accuracy of result but take longer time to complete the overall process
 * --shares <-x>: number of shares each GPU needs to generate before settings are validated e.g. "--shares 5". More shares increases stability but increases overall process time
-* --datapoints <-y>: minimum number of datapoints which are required to compare results e.g. "--datapoints 20". Higher values mean more reliable results. Duration impact is minimal.
+* --datapoints <-e>: minimum number of datapoints which are required to compare results e.g. "--datapoints 20". Higher values mean more reliable results. Duration impact is minimal.
 * --offset <-o>: to compare speed results e.g. "--offset 0.35". If set too low, your efficiency will suffer. If set too high, the efficiency will be fine but your speed result will suffer, feel free to play with this but 0.35 is a good starting point.
-* --coreUC <-c>: starting value of core underclock e.g. "--coreUC -200" will begin the core underclock with -200mhz. Separate values for multiple GPUs with comma e.g. "--coreUC -200,-100,-50"
-* --memOC <-m>: starting value of memory overclock e.g. "--memOC 1000" will begin the memory overclock with +1000mhz. Separate values for multiple GPUs with comma e.g. "--memOC 1000, 800, 550"
-* --memTweak <-z>: memory tweak parameter for compatible cards. Separate values for multiple GPUs with comma e.g. "--memTweak 1,0,3"
-* --powerLimit <-p>: starting value of power limit e.g. "--powerLimit 240" will begin power limit reduction at 240 watts. Separate values for multiple GPUs with comma e.g. "--powerLimit 240,230,250"
-* --powercost <-e>: define how much your power costs $/kWh, needed to calculate profitability in mode 2
-* --dollarPerMHash <-i>: define the value of 1 MHash, needed to calculate profitability in mode 2 - you can find out via https://whattomine.com/
-* --loadPreset <-w>: load a preset from the GPU database that is fitting to your cards. If no settings could be found, your provided OC settings (if any) or default values for the OC will be applied (MEM +0 / Core +0/ PL 100% / Fan Temp: 60ºC)
+* --coreUC <-c>: starting value of core underclock e.g. "--coreUC -200" will begin the core underclock with -200mhz. Separate values for multiple GPUs with a blank space e.g. "--coreUC -200 -100 -50"
+* --memOC <-M>: starting value of memory overclock e.g. "--memOC 1000" will begin the memory overclock with +1000mhz. Separate values for multiple GPUs with a blank space e.g. "--memOC 1000 800 550"
+* --memTweak <-t>: memory tweak parameter for compatible cards. Separate values for multiple GPUs with a blank space e.g. "--memTweak 1 0 3"
+* --powerLimit <-p>: starting value of power limit e.g. "--powerLimit 240" will begin power limit reduction at 240 watts. Separate values for multiple GPUs with a blank space e.g. "--powerLimit 240 230 250"
+* --powercost <-C>: define how much your power costs $/kWh, needed to calculate profitability in mode 2
+* --dollarPerMHash <-D>: define the value of 1 MHash, needed to calculate profitability in mode 2 - you can find out via https://whattomine.com/
+* --loadPreset <-l>: load a preset from the GPU database that is fitting to your cards. If no settings could be found, your provided OC settings (if any) or default values for the OC will be applied (MEM +0 / Core +0/ PL 100% / Fan Temp: 60ºC)
+* --skipCore : skip the core underlcock optimization process.
+* --skipMem : skip the memory overlock optimization process.
+* --skipPower : skip the power limit optimization process.
+* --verbose : adds more verbosity to the console interface (up to 3 levels). Logs will still have the full information.
 
 ## Support
 Bitcoin Talk Forum: https://bitcointalk.org/index.php?topic=5368267.0
