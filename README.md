@@ -1,4 +1,4 @@
-# CryptoTune
+# CryptoTuner
 Script to automatically find optimized and stable GPU overclock settings to mine Ethereum.
 
 # What it does
@@ -36,7 +36,7 @@ This software tracks your GPUs state every second, creates statistics from that 
 - T-Rex Miner only
 
 ## Requirements
-Following requirements need to be met in order for the tool to work properly
+The following requirements need to be met in order for the tool to work properly
 - NVIDIA Driver installed (especially nvidia-smi)
 - Up-to-date Windows 10
 - executing script with Administrative Access
@@ -54,7 +54,7 @@ See below list for aditional parameters:
 * --devices <-d>: list of GPUs by id that should be tuned, seperated by a blank space e.g. "--devices 0 1 2 3"
 * --steps <-s>: stepsize to in/decrease memory and core clocks per run e.g. "--steps 5" will increase or decrease clocks 5 Mhz at a time - lower values increase accuracy of result but take longer time to complete the overall process
 * --shares <-x>: number of shares each GPU needs to generate before settings are validated e.g. "--shares 5". More shares increases stability but increases overall process time
-* --datapoints <-e>: minimum number of datapoints which are required to compare results e.g. "--datapoints 20". Higher values mean more reliable results. Duration impact is minimal.
+* --datapoints <-e>: minimum number of datapoints which are required to compare results e.g. "--datapoints 50". Higher values mean more reliable results. Duration impact is minimal. Minimum value is 30.
 * --offset <-o>: to compare speed results e.g. "--offset 0.35". If set too low, your efficiency will suffer. If set too high, the efficiency will be fine but your speed result will suffer, feel free to play with this but 0.35 is a good starting point.
 * --coreUC <-c>: starting value of core underclock e.g. "--coreUC -200" will begin the core underclock with -200mhz. Separate values for multiple GPUs with a blank space e.g. "--coreUC -200 -100 -50"
 * --memOC <-M>: starting value of memory overclock e.g. "--memOC 1000" will begin the memory overclock with +1000mhz. Separate values for multiple GPUs with a blank space e.g. "--memOC 1000 800 550"
@@ -67,6 +67,8 @@ See below list for aditional parameters:
 * --skipMem : skip the memory overlock optimization process.
 * --skipPower : skip the power limit optimization process.
 * --verbose : adds more verbosity to the console interface (up to 3 levels). Logs will still have the full information.
+* --keepMining <-k>: once finished with the Tuning, this flag keeps the miners working until the user hits "Enter"
+* --resume <-r>: constatly writes a file with the progress of the Tuning. If the computer were to crash or the tuning had to be stopped for whatever reason, if this flag is set and the "process.json" file is present, the tool will resume the Tuning process from where it was left at.
 
 ## Support
 Bitcoin Talk Forum: https://bitcointalk.org/index.php?topic=5368267.0
