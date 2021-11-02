@@ -45,7 +45,7 @@ The following requirements need to be met in order for the tool to work properly
 ## Usage
 The tool can be run as-is. It will pick default values for tuning which might not be perfect - but will work. **It is required to run the executable or batch-script with admin privileges (see warning above!).**
 ```
-cryptotuner.exe --mode 2 --devices 0,1,2,3 --steps 5 --shares 3 --datapoints 30 --offset 0.35 --coreUC -200 --memOC 500 --powerLimit 235 --powerCost 0.36 --dollarPerMHash 0.065
+cryptotuner.exe --mode 2 --devices 0 1 2 3 --steps 5 --shares 3 --datapoints 30 --offset 0.35 --coreUC -200 --memOC 500 --powerLimit 235 --powerCost 0.36 --dollarPerMHash 0.065
 ```
 
 See below list for aditional parameters:

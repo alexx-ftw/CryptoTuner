@@ -4,10 +4,18 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## Unreleased
 ### Added
+More algorithms
 Customize Presets
 Colors to information being displayed
 ### Changed
 ### Removed
+
+## [1.4.0](https://github.com/CryptoTuner/CryptoTuner/releases/tag/1.4.0)
+## Added
+
+## [1.3.1](https://github.com/CryptoTuner/CryptoTuner/releases/tag/1.3.1) 2021-11-02
+### Fixed
+Loading of process.json for non-existing gpus
 
 ## [1.3.0](https://github.com/CryptoTuner/CryptoTuner/releases/tag/1.3.0) 2021-11-02
 ### Added
