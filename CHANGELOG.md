@@ -7,11 +7,15 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 More algorithms
 Customize Presets
 Colors to information being displayed
+Start Power Limit tuning from the lowest value
 ### Changed
 ### Removed
+### Fixed
 
-## [1.4.0](https://github.com/CryptoTuner/CryptoTuner/releases/tag/1.4.0)
-## Added
+## [1.4.0](https://github.com/CryptoTuner/CryptoTuner/releases/tag/1.4.0) 2021-11-02
+### Added
+Check if gpu already finished Tuning
+Watt Steps argument
 
 ## [1.3.1](https://github.com/CryptoTuner/CryptoTuner/releases/tag/1.3.1) 2021-11-02
 ### Fixed
