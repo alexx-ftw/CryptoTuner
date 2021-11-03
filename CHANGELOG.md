@@ -12,7 +12,11 @@ Start Power Limit tuning from the lowest value
 ### Removed
 ### Fixed
 
-## [1.4.0](https://github.com/CryptoTuner/CryptoTuner/releases/tag/1.4.0) 2021-11-02
+## [1.4.1](https://github.com/CryptoTuner/CryptoTuner/releases/tag/1.4.1) 2021-11-03
+### Fixed
+Problem with the initialization of the program.
+
+## [1.4.0](https://github.com/CryptoTuner/CryptoTuner/releases/tag/1.4.0) 2021-11-02 [YANKED]
 ### Added
 Check if gpu already finished Tuning
 Watt Steps argument
