@@ -8,6 +8,7 @@ More algorithms
 Customize Presets
 Colors to information being displayed
 Start Power Limit tuning from the lowest value
+Custom pool/wallet to use with the --keepMining parameter
 ### Changed
 ### Removed
 ### Fixed
