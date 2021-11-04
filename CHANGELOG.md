@@ -6,12 +6,24 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 More algorithms
 Customize Presets
-Colors to information being displayed
-Start Power Limit tuning from the lowest value
-Custom pool/wallet to use with the --keepMining parameter
+Custom pool/wallet to use with the --keep_mining parameter
+Total Power Draw
 ### Changed
 ### Removed
 ### Fixed
+Console Exit Handler
+
+## [1.5.0](https://github.com/CryptoTuner/CryptoTuner/releases/tag/1.5.0) 2021-11-03
+### Added
+"--serial" flag for doing the optimization on a serialized way (instead of parallel) for the GPUs. Useful for when PSU has not enough power or when other GPUs are generating too much heat/interference
+Estimated ETA for next Share
+Detect closing via GUI
+Colors to information being displayed
+### Changed
+GPU information display format
+### Fixed
+Properly write Logfile
+
 
 ## [1.4.1](https://github.com/CryptoTuner/CryptoTuner/releases/tag/1.4.1) 2021-11-03
 ### Fixed
@@ -30,7 +42,7 @@ Loading of process.json for non-existing gpus
 ### Added
 "--resume" flag for continuing the OC process from where it was left at (in case of BSOD or manually quitting)
 Only count datapoints once there is Hashrate
-"--keepMining" flag for continuing with mining once Tuning is complete
+"--keep_mining" flag for continuing with mining once Tuning is complete
 Memory tweak detection: will lower Mem OC to -1000 for stability
 
 ## [1.2.0](https://github.com/CryptoTuner/CryptoTuner/releases/tag/1.2.0) 2021-11-01
@@ -46,7 +58,7 @@ Debug information form CLI
 
 ## [1.1.0](https://github.com/CryptoTuner/CryptoTuner/releases/tag/1.1.0) 2021-10-30
 ### Added
-"MemTweak" parameter/argument for compatible cards
+"mem_tweak" parameter/argument for compatible cards
 This CHANGELOG as a way to document changes on the code.
 
 
